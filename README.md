@@ -39,4 +39,4 @@ DELETE /api/exemplo/{id}: Exclui um exemplo com o ID fornecido.
 Contribuindo
 Sinta-se à vontade para contribuir com melhorias ou correções de bugs. Basta criar uma issue ou enviar um pull request.
 
-Esperamos que esta Web API seja útil e fácil de usar. Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato. Agradecemos sua contribuição!
+Espero que esta Web API seja útil e fácil de usar. Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato. Agradecemos sua contribuição!
