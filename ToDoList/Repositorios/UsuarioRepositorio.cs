@@ -24,8 +24,8 @@ namespace ToDoList.Repositorios
 
         public async Task<UsuarioModel> Adicionar(UsuarioModel usuario)
         {
-            _db.Usuario.Add(usuario);
-            _db.SaveChanges();
+            await _db.Usuario.AddAsync(usuario);
+            await _db.SaveChangesAsync();
             return usuario;
         }
         public async Task<UsuarioModel> Atualizar(UsuarioModel usuario, int id)
@@ -39,7 +39,7 @@ namespace ToDoList.Repositorios
             usuarioPorId.Email = usuario.Email;
 
             _db.Usuario.Update(usuarioPorId);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
             return usuarioPorId;
         }
         public async Task<bool> Apagar(int id)
@@ -50,7 +50,7 @@ namespace ToDoList.Repositorios
                 throw new Exception($"Usuario para o Id: {id} não foi encontrado no banco de dados");
             }
             _db.Usuario.Remove(usuarioPorId);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
             return true;
            
         }
