@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ToDoList.Data;
 
@@ -10,9 +11,10 @@ using ToDoList.Data;
 namespace ToDoList.Migrations
 {
     [DbContext(typeof(TarefasDBContext))]
-    partial class TarefasDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231119155045_ViculoTarefausuario")]
+    partial class ViculoTarefausuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

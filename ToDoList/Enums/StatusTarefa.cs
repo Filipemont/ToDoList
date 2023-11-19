@@ -9,6 +9,6 @@ namespace ToDoList.Enums
         [Description("Em Andamento")]
         EmAndamento = 2,
         [Description("Concluido")]
-        Concuido = 3
+        Concluido = 3
     }
 }
