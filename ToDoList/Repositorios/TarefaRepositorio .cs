@@ -15,11 +15,15 @@ namespace ToDoList.Repositorios
 
         public async Task<List<TarefaModel>> BuscarTarefas()
         {
-            return await _db.Tarefas.ToListAsync();
+            return await _db.Tarefas
+                .Include(x => x.Usuario)
+                .ToListAsync();
         }
         public async Task<TarefaModel> BuscarPorId(int id)
         {
-            return await _db.Tarefas.FirstOrDefaultAsync(x => x.Id == id);
+            return await _db.Tarefas
+                .Include(x=>x.Usuario)
+                .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<TarefaModel> Adicionar(TarefaModel tarefa)
